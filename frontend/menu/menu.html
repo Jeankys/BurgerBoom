@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active" href="..\src\index.html">Inicio</a>
+            <a href="..\contactenos\Contactenos.html">Contactanos</a>
+            <a href="..\menu\menu.html">Menú</a>
+            <a href="registro.html">Registro</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Menú</h1>
+        <form>
+            <!-- Inicio de la sección de Hamburguesas -->
+            <div class="form-group menu-section">
+                <label for="hamburguesas">Hamburguesas</label>
+                <select id="hamburguesas" name="hamburguesas">
+                    <option value="">Seleccionar...</option>
+                    <option value="clasica">Clásica</option>
+                    <option value="doble_carne">Doble Carne</option>
+                    <option value="vegetariana">Vegetariana</option>
+                </select>
+            </div>
+            <!-- Fin de la sección de Hamburguesas -->
+
+            <!-- Inicio de la sección de Adiciones -->
+            <div class="form-group menu-section">
+                <label for="adiciones">Adiciones</label>
+                <select id="adiciones" name="adiciones">
+                    <option value="">Seleccionar...</option>
+                    <option value="doble_queso">Doble Queso</option>
+                    <option value="ripio">Ripio</option>
+                    <option value="queso_mexicano">Queso Mexicano</option>
+                    <option value="otra_carne">Otra Carne</option>
+                </select>
+            </div>
+            <!-- Fin de la sección de Adiciones -->
+
+            <!-- Inicio de la sección de Bebidas -->
+            <div class="form-group menu-section">
+                <label for="bebidas">Bebidas</label>
+                <select id="bebidas" name="bebidas">
+                    <option value="">Seleccionar...</option>
+                    <option value="cocacola">CocaCola</option>
+                    <option value="jugo_hit">Jugo Hit</option>
+                    <option value="pepsi">Pepsi</option>
+                </select>
+            </div>
+            <!-- Fin de la sección de Bebidas -->
+
+            <!-- Inicio de la sección de Mensaje adicional -->
+            <div class="form-group menu-section">
+                <label for="mensaje">Mensaje adicional:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí..."></textarea>
+            </div>
+            <!-- Fin de la sección de Mensaje adicional -->
+
+            <button type="button" id="finalizarOrden" class="order-btn">Finalizar Orden</button>
+        </form>
+    </div>
+
+    <div id="popupOrden" class="popup">
+        <div class="popup-content">
+            <span id="closePopup">&times;</span>
+            <h3>Resumen de tu pedido</h3>
+            <p id="resumenOrden"></p>
+            <h2>Tu pedido esta en proceso... :D</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
